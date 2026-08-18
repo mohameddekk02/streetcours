@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #034565;
+  --primary-container: #285d7e;
+  --secondary: #825505;
+  --secondary-container: #fec16d;
+  --surface: #f9f9fc;
+  --surface-card: #fbf7ed;
+  --error: #ba1a1a;
+  --margin-line: #9c3226;
+  --text-main: #191c1e;
+  --text-muted: #41474d;
+}
+
+body {
+  background-color: #f9f9fc;
+  color: #191c1e;
+  font-family: var(--font-public-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Academic Stationery & Tactile Paper Effects */
+.paper-shadow {
+  box-shadow: 0 4px 30px rgba(21, 30, 51, 0.05);
+}
+
+.paper-shadow-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.paper-shadow-hover:hover {
+  box-shadow: 0 8px 40px rgba(21, 30, 51, 0.09);
+  transform: translateY(-2px);
+}
+
+/* Notebook Left Red Margin Line */
+.notebook-margin {
+  position: relative;
+}
+
+.notebook-margin::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background-color: rgba(186, 26, 26, 0.7);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .notebook-margin::before {
+    left: 40px;
+  }
+}
+
+/* Academic Cachet (Official Stamp) */
+.cachet-border {
+  border: 2px solid currentColor;
+  outline: 1.5px solid currentColor;
+  outline-offset: -4px;
+  border-radius: 9999px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+}
+
+.cachet-stamp-rotate-right {
+  transform: rotate(3deg);
+}
+
+.cachet-stamp-rotate-left {
+  transform: rotate(-3deg);
+}
+
+/* French / Djiboutian Seyes Paper Grid for Exam Copy */
+.seyes-grid {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(186, 26, 26, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, transparent 59px, rgba(186, 26, 26, 0.6) 60px, transparent 61px),
+    linear-gradient(rgba(3, 69, 101, 0.08) 1px, transparent 1px);
+  background-size: 100% 32px, 100% 100%, 100% 8px;
+  line-height: 32px;
+}
+
+/* Material Symbols sizing */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom Scrollbar for tactile academic feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f3f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c7ce;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #71787e;
+}
