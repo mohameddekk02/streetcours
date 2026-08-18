@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard,
@@ -32,6 +31,16 @@ export function StudentSidebar() {
     logout();
     router.push('/');
   };
+
+  const initials = student.fullName
+    ? student.fullName
+        .split(' ')
+        .filter(Boolean)
+        .map((n) => n[0])
+        .slice(0, 2)
+        .join('')
+        .toUpperCase()
+    : 'AY';
 
   const navItems = [
     {
@@ -89,16 +98,10 @@ export function StudentSidebar() {
 
   return (
     <aside className="w-64 bg-surface-container-low border-r-2 border-error/70 flex flex-col min-h-screen sticky top-0 h-screen z-30 shadow-[4px_0px_15px_rgba(21,30,51,0.05)]">
-      {/* Student Profile Header in Sidebar */}
+      {/* Student Profile Header in Sidebar with Initials Avatar */}
       <div className="p-6 pb-4 flex flex-col items-center text-center border-b border-outline-variant/40 bg-surface-container-lowest/50">
-        <div className="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-primary/40 shadow-sm relative">
-          <Image
-            src={student.avatarUrl}
-            alt={student.fullName}
-            fill
-            sizes="64px"
-            className="object-cover"
-          />
+        <div className="w-14 h-14 rounded-2xl bg-primary text-on-primary font-headline font-black text-xl flex items-center justify-center mb-3 shadow-md border-2 border-primary/20">
+          {initials}
         </div>
         <h2 className="font-headline font-bold text-primary text-base leading-tight">
           {student.fullName}
@@ -110,6 +113,7 @@ export function StudentSidebar() {
           {student.schoolName}
         </span>
       </div>
+
 
 
       {/* Nav links */}

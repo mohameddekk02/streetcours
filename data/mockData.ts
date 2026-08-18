@@ -4,8 +4,9 @@ export const mockStudent: StudentProfile = {
   id: 'stu-dj-0982',
   fullName: 'Ali Youssouf Farah',
   email: 'ali.youssouf@lyceedetat.dj',
-  avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+  avatarUrl: 'https://api.dicebear.com/7.x/initials/svg?seed=AYF&backgroundColor=1a6b3c',
   level: 'BAC_S',
+
   schoolName: "Lycée d'État de Djibouti (LED)",
   targetMention: 'Très Bien',
   readinessScore: 78,

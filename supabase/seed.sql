@@ -264,8 +264,9 @@ INSERT INTO students (id, full_name, email, avatar_url, level, school_name, targ
     'stu-dj-0982',
     'Ali Youssouf Farah',
     'ali.youssouf@lyceedetat.dj',
-    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+    'https://api.dicebear.com/7.x/initials/svg?seed=AYF&backgroundColor=1a6b3c',
     'BAC_S',
+
     'Lycée d''État de Djibouti (LED)',
     'Très Bien',
     78,
