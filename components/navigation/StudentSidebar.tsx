@@ -64,11 +64,12 @@ export function StudentSidebar() {
       icon: PenTool,
     },
     {
-      label: 'Tuteur Socratique IA',
+      label: 'Tuteur Socratique',
       href: '/eleve/tuteur',
       icon: Bot,
       badge: 'IA',
     },
+
     {
       label: 'Sélection d\u2019Épreuves',
       href: '/eleve/examens',

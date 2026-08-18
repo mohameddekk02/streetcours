@@ -104,7 +104,7 @@ export default function RapportClassePage() {
             </h3>
           </div>
           <span className="font-mono text-xs text-on-surface-variant">
-            Basé sur 120 copies d&apos;examens blancs
+            Analyse diagnostique ({totalStudents} élèves)
           </span>
         </div>
 
@@ -113,12 +113,13 @@ export default function RapportClassePage() {
             <div key={idx} className="p-4 bg-surface-container-low rounded-xl border border-outline-variant/60 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-error/10 text-error">
-                  {item.impactedStudentsCount} élèves concernés
+                  {Math.min(totalStudents, item.impactedStudentsCount || (idx === 0 ? 4 : 3))} élèves sur {totalStudents}
                 </span>
                 <span className="text-[10px] font-mono text-on-surface-variant font-bold">
                   Priorité {item.severity}
                 </span>
               </div>
+
               <h4 className="font-headline font-bold text-xs text-primary leading-snug">
                 {item.topic}
               </h4>

@@ -540,21 +540,22 @@ export const mockClassReport = {
   identifiedMisconceptions: [
     {
       topic: 'Limites de fonctions avec formes indéterminées (0/0 et ∞/∞)',
-      impactedStudentsCount: 14,
+      impactedStudentsCount: 4,
       severity: 'High',
       suggestedRemediation: 'Séance de rappel sur le théorème des croissances comparées et la règle de l’Hôpital.'
     },
     {
       topic: 'Incertitudes de mesure & chiffres significatifs en TP de Physique',
-      impactedStudentsCount: 11,
+      impactedStudentsCount: 3,
       severity: 'Medium',
       suggestedRemediation: 'Devoir maison sur l’incertitude-type et la propagation des erreurs.'
     },
     {
       topic: 'Problématique de dissertation en Philosophie',
-      impactedStudentsCount: 16,
+      impactedStudentsCount: 3,
       severity: 'High',
       suggestedRemediation: 'Atelier de rédaction : distinguer le paradoxe de la simple question descriptive.'
     }
   ]
 };
+
