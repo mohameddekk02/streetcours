@@ -22,10 +22,14 @@ export function LandingNav() {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 font-body text-sm font-medium text-on-surface">
-          <Link href="/#annales" className="hover:text-primary transition-colors flex items-center gap-1.5">
+        <nav className="hidden md:flex items-center gap-6 font-body text-sm font-medium text-on-surface">
+          <Link href="/#piliers" className="hover:text-primary transition-colors flex items-center gap-1.5">
             <BookOpen className="w-4 h-4 text-primary" />
-            Annales & Sujets
+            Piliers Pédagogiques
+          </Link>
+          <Link href="/#parcours" className="hover:text-primary transition-colors flex items-center gap-1.5">
+            <span className="material-symbols-outlined text-base text-secondary">explore</span>
+            Parcours Recommandé
           </Link>
           <Link href="/#series" className="hover:text-primary transition-colors flex items-center gap-1.5">
             <GraduationCap className="w-4 h-4 text-primary" />
@@ -33,12 +37,10 @@ export function LandingNav() {
           </Link>
           <Link href="/#tuteur" className="hover:text-primary transition-colors flex items-center gap-1.5">
             <Sparkles className="w-4 h-4 text-secondary" />
-            Tuteur Socratique IA
-          </Link>
-          <Link href="/#statistiques" className="hover:text-primary transition-colors">
-            Résultats & Mentions
+            Tuteur IA
           </Link>
         </nav>
+
 
         {/* Auth CTA Buttons */}
         <div className="flex items-center gap-3">

@@ -15,10 +15,13 @@ import {
   FileText,
   Star,
   Users,
+  Compass,
+  Target,
 } from 'lucide-react';
 import { LandingNav } from '@/components/navigation/LandingNav';
 import { Cachet } from '@/components/ui/Cachet';
 import { TextureOverlay } from '@/components/ui/TextureOverlay';
+
 
 
 export default function LandingPage() {
@@ -151,8 +154,124 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* 4 Core Pillars Section (Défi 1 & Architecture Pédagogique) */}
+      <section id="piliers" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-outline-variant/60 relative">
+        {/* Decorative Notebook Margin */}
+        <div className="hidden lg:block absolute top-0 bottom-0 left-12 w-[2px] bg-error/70 pointer-events-none" />
+
+        <div className="lg:pl-8 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="font-mono text-xs font-bold text-secondary uppercase tracking-wider">
+              Architecture Pédagogique MENFOP
+            </span>
+            <h2 className="font-headline text-3xl sm:text-4xl font-black text-primary">
+              Les 4 Piliers de l&apos;Excellence Académique
+            </h2>
+            <p className="font-body text-sm sm:text-base text-on-surface-variant">
+              Une méthode structurée et éprouvée pour accompagner chaque candidat vers l&apos;admission avec mention.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Pilier 1: Annales & Sujets */}
+            <div id="annales" className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6 paper-shadow-hover flex flex-col justify-between space-y-4 relative overflow-hidden group">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <BookOpen className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-headline font-bold text-lg text-primary">
+                  1. Annales & Sujets Officiels
+                </h3>
+                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+                  Annales authentiques du Baccalauréat et Brevet djiboutien classées par matière, filière et niveau de difficulté avec barèmes complets.
+                </p>
+              </div>
+              <Link
+                href="/eleve/examens"
+                className="text-xs font-mono font-bold text-primary hover:text-primary-container inline-flex items-center gap-1 pt-2 border-t border-outline-variant/40"
+              >
+                <span>Consulter les annales</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Pilier 2: Diagnostic Adaptatif & Parcours Recommandé (DÉFI 1) */}
+            <div id="parcours" className="bg-surface-container-lowest border-2 border-secondary/40 rounded-2xl p-6 paper-shadow-hover flex flex-col justify-between space-y-4 relative overflow-hidden group ring-1 ring-secondary/20">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-secondary-container/40 text-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Compass className="w-6 h-6 text-secondary" />
+                </div>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-headline font-bold text-lg text-primary">
+                    2. Diagnostic Adaptatif
+                  </h3>
+                  <span className="px-2 py-0.5 rounded text-[9px] font-mono font-bold bg-secondary text-on-secondary uppercase">
+                    Défi 1
+                  </span>
+                </div>
+                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+                  À partir des lacunes détectées sur les exercices et copies de l&apos;élève, la plateforme génère un parcours d&apos;exercices personnalisé, plutôt qu&apos;une liste de contenus identique pour tous.
+                </p>
+              </div>
+              <Link
+                href="/eleve/parcours"
+                className="text-xs font-mono font-bold text-secondary hover:underline inline-flex items-center gap-1 pt-2 border-t border-outline-variant/40"
+              >
+                <span>Découvrir le parcours</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Pilier 3: Tuteur Socratique IA */}
+            <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6 paper-shadow-hover flex flex-col justify-between space-y-4 relative overflow-hidden group">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-6 h-6 text-amber-700" />
+                </div>
+                <h3 className="font-headline font-bold text-lg text-primary">
+                  3. Tuteur Socratique IA
+                </h3>
+                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+                  Pédagogie active guidée par le questionnement : l&apos;IA fournit des indices méthodologiques sans dévoiler la solution brute pré-mâchée.
+                </p>
+              </div>
+              <Link
+                href="/eleve/tuteur"
+                className="text-xs font-mono font-bold text-primary hover:text-primary-container inline-flex items-center gap-1 pt-2 border-t border-outline-variant/40"
+              >
+                <span>Tester le tuteur</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            {/* Pilier 4: Résultats & Mentions */}
+            <div id="statistiques" className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6 paper-shadow-hover flex flex-col justify-between space-y-4 relative overflow-hidden group">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-6 h-6 text-emerald-700" />
+                </div>
+                <h3 className="font-headline font-bold text-lg text-primary">
+                  4. Résultats & Mentions
+                </h3>
+                <p className="font-body text-xs text-on-surface-variant leading-relaxed">
+                  Mesure continue du score de préparation au Bac, projection de mention et simulation sur copies officielles au lignage Séyès.
+                </p>
+              </div>
+              <Link
+                href="/eleve/historique"
+                className="text-xs font-mono font-bold text-primary hover:text-primary-container inline-flex items-center gap-1 pt-2 border-t border-outline-variant/40"
+              >
+                <span>Voir la progression</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Series Covered Section */}
       <section id="series" className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <span className="font-mono text-xs font-bold text-secondary uppercase tracking-wider">
             Toutes les filières nationales
