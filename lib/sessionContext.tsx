@@ -73,11 +73,12 @@ export const DEMO_PROFILES: DemoProfile[] = [
   },
   {
     id: 'teacher-1',
-    fullName: 'Prof. Abdillahi Guelleh',
+    fullName: 'Prof. Idriss Farah',
     role: 'enseignant',
-    subtitle: 'Inspecteur MENFOP • Mathématiques',
+    subtitle: 'Professeur Référent • Mathématiques',
   },
 ];
+
 
 // ── Storage key ────────────────────────────────────────────────────
 const STORAGE_KEY = 'streetcours_demo_session';

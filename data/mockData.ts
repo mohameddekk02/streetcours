@@ -519,8 +519,9 @@ export const mockClassStudents: ClassStudent[] = [
 export const mockClassReport = {
   className: 'Terminale S1 — Lycée d’État de Djibouti',
   academicYear: '2024-2025',
-  headTeacher: 'Prof. Abdillahi Guelleh (Inspecteur MENFOP)',
+  headTeacher: 'Prof. Idriss Farah (Professeur Référent)',
   totalStudents: 34,
+
   classAverage: 14.1,
   readinessRate: 72,
   targetMentionRates: {

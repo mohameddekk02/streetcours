@@ -288,8 +288,9 @@ INSERT INTO classes (id, class_name, academic_year, head_teacher, total_students
     'b0000001-0000-0000-0000-000000000001',
     'Terminale S1 — Lycée d''État de Djibouti',
     '2024-2025',
-    'Prof. Abdillahi Guelleh (Inspecteur MENFOP)',
+    'Prof. Idriss Farah (Professeur Référent)',
     34,
+
     14.1,
     72,
     '{"tresBien": 28, "bien": 42, "assezBien": 22, "passable": 8}'::jsonb,
