@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   title: "StreetCours — Prépa Examens Nationaux Djibouti (Baccalauréat & Brevet)",
   description: "Plateforme d'excellence académique pour les élèves et enseignants de Djibouti. Annales officielles, examens blancs chronométrés, tuteur socratique IA et suivi de progression.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

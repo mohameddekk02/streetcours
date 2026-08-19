@@ -40,8 +40,8 @@ export default function LandingPage() {
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 lg:pl-8">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/30 border border-secondary/40 text-secondary text-xs font-mono font-bold tracking-wide">
-                <GraduationCap className="w-4 h-4" />
-                CONFORME AUX PROGRAMMES OFFICIELS DU MENFOP DJIBOUTI
+                <GraduationCap className="w-4 h-4 shrink-0" />
+                <span>CONTENUS ALIGNÉS SUR LE PROGRAMME OFFICIEL DU MENFOP</span>
               </div>
 
               <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl font-black text-primary tracking-tight leading-[1.1]">
@@ -57,10 +57,10 @@ export default function LandingPage() {
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                 <Link
                   href="/connexion"
-                  className="px-7 py-3.5 rounded-xl bg-primary text-on-primary font-mono text-sm font-bold hover:bg-primary-container transition-all shadow-md flex items-center gap-2.5 hover:scale-[1.02] active:scale-[0.98]"
+                  className="px-7 py-3.5 rounded-xl bg-primary text-on-primary font-mono text-sm font-bold hover:bg-primary-container transition-all shadow-md flex items-center justify-center gap-2.5 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <span>Créer mon Espace Élève Gratuit</span>
                   <ArrowRight className="w-4 h-4" />
@@ -68,7 +68,7 @@ export default function LandingPage() {
 
                 <Link
                   href="/eleve/examens"
-                  className="px-6 py-3.5 rounded-xl bg-surface-container-lowest border-2 border-primary/20 text-primary font-mono text-sm font-bold hover:bg-surface-container-high hover:border-primary transition-all flex items-center gap-2"
+                  className="px-6 py-3.5 rounded-xl bg-surface-container-lowest border-2 border-primary/20 text-primary font-mono text-sm font-bold hover:bg-surface-container-high hover:border-primary transition-all flex items-center justify-center gap-2"
                 >
                   <BookOpen className="w-4 h-4" />
                   <span>Consulter les Annales</span>
@@ -76,18 +76,14 @@ export default function LandingPage() {
               </div>
 
               {/* Trust Indicators */}
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-outline-variant/60">
+              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-outline-variant/60 max-w-md">
                 <div>
-                  <div className="font-headline font-black text-2xl text-primary">94.6%</div>
-                  <div className="font-body text-xs text-on-surface-variant">Taux d&apos;admission Bac</div>
-                </div>
-                <div>
-                  <div className="font-headline font-black text-2xl text-secondary">+150</div>
+                  <div className="font-headline font-black text-2xl sm:text-3xl text-secondary">+150</div>
                   <div className="font-body text-xs text-on-surface-variant">Sujets d&apos;annales MENFOP</div>
                 </div>
                 <div>
-                  <div className="font-headline font-black text-2xl text-emerald-700">100%</div>
-                  <div className="font-body text-xs text-on-surface-variant">Conforme Djibouti</div>
+                  <div className="font-headline font-black text-2xl sm:text-3xl text-emerald-700">100%</div>
+                  <div className="font-body text-xs text-on-surface-variant">Programme national</div>
                 </div>
               </div>
             </div>
@@ -486,9 +482,7 @@ export default function LandingPage() {
       <footer className="bg-surface-container-highest border-t border-outline-variant py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-serif font-bold text-lg">
-              S
-            </div>
+            <img src="/logo.png" alt="StreetCours" className="w-8 h-8 rounded-lg object-contain" />
             <div>
               <span className="font-headline font-bold text-primary">StreetCours Djibouti</span>
               <p className="font-body text-xs text-on-surface-variant">Plateforme d&apos;excellence académique et de préparation aux examens nationaux.</p>
@@ -502,7 +496,7 @@ export default function LandingPage() {
           </div>
 
           <div className="text-xs font-mono text-on-surface-variant text-center md:text-right">
-            © 2025 StreetCours Djibouti • Ministère de l&apos;Éducation Nationale (MENFOP)
+            © 2026 StreetCours Djibouti • Ministère de l&apos;Éducation Nationale (MENFOP)
           </div>
         </div>
       </footer>

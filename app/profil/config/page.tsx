@@ -39,9 +39,7 @@ export default function ProfileConfigPage() {
         {/* Top bar */}
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary text-on-primary font-serif font-bold text-lg flex items-center justify-center">
-              S
-            </div>
+            <img src="/logo.png" alt="StreetCours" className="w-8 h-8 rounded-lg object-contain" />
             <span className="font-headline font-bold text-primary text-lg">StreetCours</span>
           </Link>
           <Link

@@ -25,9 +25,7 @@ export default function ConnexionEnseignantPage() {
 
       <header className="p-6 border-b border-outline-variant/60 bg-surface/80 backdrop-blur-md flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-lg bg-primary text-on-primary font-serif font-bold text-xl flex items-center justify-center">
-            S
-          </div>
+          <img src="/logo.png" alt="StreetCours" className="w-9 h-9 rounded-lg object-contain" />
           <div>
             <span className="font-headline font-bold text-lg text-primary block leading-none">
               StreetCours

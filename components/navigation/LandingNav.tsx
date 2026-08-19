@@ -8,9 +8,7 @@ export function LandingNav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center font-serif font-black text-2xl shadow-sm group-hover:scale-105 transition-transform">
-            S
-          </div>
+          <img src="/logo.png" alt="StreetCours" className="w-11 h-11 rounded-xl shadow-sm group-hover:scale-105 transition-transform object-contain" />
           <div>
             <span className="font-headline font-black text-xl md:text-2xl text-primary tracking-tight block">
               StreetCours
