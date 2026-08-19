@@ -25,16 +25,15 @@ export default function ConnexionPage() {
 
       {/* Top Simple Header */}
       <header className="p-6 border-b border-outline-variant/60 bg-surface/80 backdrop-blur-md flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <img src="/logo.png" alt="StreetCours" className="w-9 h-9 rounded-lg object-contain" />
-          <div>
-            <span className="font-headline font-bold text-lg text-primary block leading-none">
-              StreetCours
-            </span>
-            <span className="font-mono text-[9px] text-secondary font-bold tracking-widest uppercase">
-              Djibouti
-            </span>
-          </div>
+        <Link href="/" className="flex items-center gap-3 group">
+          <img
+            src="/logo.png"
+            alt="StreetCours"
+            className="w-12 h-12 object-contain group-hover:scale-105 transition-transform"
+          />
+          <span className="font-headline font-bold text-xl text-primary block leading-none">
+            StreetCours
+          </span>
         </Link>
 
         <Link
@@ -143,7 +142,7 @@ export default function ConnexionPage() {
       </main>
 
       <footer className="p-4 text-center font-mono text-[11px] text-on-surface-variant border-t border-outline-variant/60">
-        StreetCours Djibouti • Mode démo — Authentification reportée après concours
+        StreetCours • Mode démo — Authentification reportée après concours
       </footer>
     </div>
   );

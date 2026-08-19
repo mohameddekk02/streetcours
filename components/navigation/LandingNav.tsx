@@ -7,16 +7,12 @@ export function LandingNav() {
     <header className="sticky top-0 z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant/60 paper-shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <img src="/logo.png" alt="StreetCours" className="w-11 h-11 rounded-xl shadow-sm group-hover:scale-105 transition-transform object-contain" />
-          <div>
-            <span className="font-headline font-black text-xl md:text-2xl text-primary tracking-tight block">
-              StreetCours
-            </span>
-            <span className="font-mono text-[10px] text-secondary font-bold uppercase tracking-widest block -mt-1">
-              Excellence Djibouti
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group py-1">
+          <img
+            src="/logo.png"
+            alt="StreetCours"
+            className="w-14 h-14 md:w-16 md:h-16 object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+          />
         </Link>
 
         {/* Navigation Links */}

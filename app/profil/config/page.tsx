@@ -38,9 +38,13 @@ export default function ProfileConfigPage() {
       <div className="max-w-3xl mx-auto space-y-6">
         {/* Top bar */}
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="StreetCours" className="w-8 h-8 rounded-lg object-contain" />
-            <span className="font-headline font-bold text-primary text-lg">StreetCours</span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <img
+              src="/logo.png"
+              alt="StreetCours"
+              className="w-11 h-11 object-contain group-hover:scale-105 transition-transform"
+            />
+            <span className="font-headline font-bold text-primary text-xl">StreetCours</span>
           </Link>
           <Link
             href="/eleve/dashboard"

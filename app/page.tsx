@@ -480,23 +480,55 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="bg-surface-container-highest border-t border-outline-variant py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="StreetCours" className="w-8 h-8 rounded-lg object-contain" />
-            <div>
-              <span className="font-headline font-bold text-primary">StreetCours Djibouti</span>
-              <p className="font-body text-xs text-on-surface-variant">Plateforme d&apos;excellence académique et de préparation aux examens nationaux.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-outline-variant/60">
+            <div className="flex items-center gap-3.5">
+              <img
+                src="/logo.png"
+                alt="StreetCours"
+                className="w-12 h-12 object-contain drop-shadow-sm"
+              />
+              <div>
+                <span className="font-headline font-bold text-xl text-primary tracking-tight block">
+                  StreetCours
+                </span>
+                <p className="font-body text-xs text-on-surface-variant">
+                  Plateforme d&apos;excellence académique et de préparation aux examens nationaux.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-on-surface-variant">
+              <Link href="/connexion" className="hover:text-primary transition-colors">
+                Espace Élève
+              </Link>
+              <Link href="/enseignant/connexion" className="hover:text-primary transition-colors">
+                Espace Enseignant
+              </Link>
+              <Link href="/eleve/examens" className="hover:text-primary transition-colors">
+                Annales
+              </Link>
+              <Link href="/#parcours" className="hover:text-primary transition-colors">
+                Diagnostic Adaptatif
+              </Link>
+              <Link href="/#tuteur" className="hover:text-primary transition-colors">
+                Tuteur IA
+              </Link>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 font-mono text-xs text-on-surface-variant">
-            <Link href="/connexion" className="hover:text-primary transition-colors">Espace Élève</Link>
-            <Link href="/enseignant/connexion" className="hover:text-primary transition-colors">Espace Enseignant</Link>
-            <Link href="/eleve/examens" className="hover:text-primary transition-colors">Annales</Link>
-          </div>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-on-surface-variant">
+            <div>
+              © 2026 StreetCours • Tous droits réservés.
+            </div>
 
-          <div className="text-xs font-mono text-on-surface-variant text-center md:text-right">
-            © 2026 StreetCours Djibouti • Ministère de l&apos;Éducation Nationale (MENFOP)
+            <div className="flex items-center gap-2">
+              <span>Propulsé par</span>
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-low border border-outline-variant/80 text-primary font-bold shadow-xs">
+                <img src="/logo.png" alt="DjibStreet" className="w-4 h-4 object-contain" />
+                <span className="font-headline tracking-wide">DjibStreet</span>
+              </div>
+            </div>
           </div>
         </div>
       </footer>
