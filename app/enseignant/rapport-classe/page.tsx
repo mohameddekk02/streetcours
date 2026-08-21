@@ -144,7 +144,8 @@ export default function RapportClassePage() {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        {/* Desktop Table View */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="bg-surface-container-high/60 border-b border-outline-variant text-[11px] font-mono font-bold text-on-surface-variant uppercase tracking-wider">
@@ -162,6 +163,87 @@ export default function RapportClassePage() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile View: Stacked Student Cards */}
+        <div className="md:hidden divide-y divide-outline-variant/40">
+          {mockClassStudents.map((student) => {
+            const initials = student.fullName
+              .split(' ')
+              .filter(Boolean)
+              .map((n) => n[0])
+              .slice(0, 2)
+              .join('')
+              .toUpperCase();
+
+            return (
+              <div key={student.id} className="p-4 space-y-3 bg-surface-container-lowest">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-9 h-9 rounded-xl bg-primary text-on-primary font-headline font-bold text-xs flex items-center justify-center shrink-0">
+                      {initials}
+                    </div>
+                    <div className="min-w-0">
+                      <Link
+                        href={`/enseignant/eleve/${student.id}`}
+                        className="font-headline font-bold text-sm text-primary hover:underline block leading-tight truncate"
+                      >
+                        {student.fullName}
+                      </Link>
+                      <span className="font-mono text-[10px] text-on-surface-variant">
+                        {student.matricule}
+                      </span>
+                    </div>
+                  </div>
+
+                  <span
+                    className={`px-2 py-0.5 rounded-full text-[10px] font-mono font-bold shrink-0 ${
+                      student.status === 'Excellence'
+                        ? 'bg-emerald-100 text-emerald-800'
+                        : student.status === 'Régulier'
+                        ? 'bg-blue-100 text-blue-800'
+                        : 'bg-amber-100 text-amber-800'
+                    }`}
+                  >
+                    {student.status}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 p-2.5 bg-surface-container-low rounded-xl text-xs font-mono">
+                  <div>
+                    <span className="text-[10px] text-on-surface-variant block uppercase">Moyenne</span>
+                    <span className="font-bold text-sm text-primary">{student.averageScore.toFixed(1)}/20</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-on-surface-variant block uppercase">Prépa Bac</span>
+                    <div className="flex items-center gap-1.5 mt-0.5">
+                      <div className="w-12 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-emerald-600"
+                          style={{ width: `${student.readinessScore}%` }}
+                        />
+                      </div>
+                      <span className="font-bold text-xs text-on-surface">{student.readinessScore}%</span>
+                    </div>
+                  </div>
+                </div>
+
+                {student.strongSubjects?.length > 0 && (
+                  <div className="text-[11px] font-body text-on-surface-variant">
+                    <span className="font-semibold text-on-surface">Points forts :</span> {student.strongSubjects.join(', ')}
+                  </div>
+                )}
+
+                <Link
+                  href={`/enseignant/eleve/${student.id}`}
+                  className="w-full py-2.5 px-3 rounded-xl border border-outline-variant hover:border-primary bg-surface-container-low text-xs font-mono font-bold text-primary flex items-center justify-center gap-1.5 transition-colors active:scale-[0.99]"
+                >
+                  <span>Consulter le Dossier Élève</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

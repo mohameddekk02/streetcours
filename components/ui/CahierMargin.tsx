@@ -12,7 +12,7 @@ export function CahierMargin({
   showMarginLine = true,
 }: CahierMarginProps) {
   return (
-    <div className={`relative ${showMarginLine ? 'notebook-margin pl-8 md:pl-14' : ''} ${className}`}>
+    <div className={`relative ${showMarginLine ? 'notebook-margin pl-5 sm:pl-10 md:pl-14' : ''} ${className}`}>
       {children}
     </div>
   );

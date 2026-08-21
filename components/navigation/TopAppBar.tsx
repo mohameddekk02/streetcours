@@ -8,23 +8,50 @@ import { useStudent } from '@/lib/supabaseHooks';
 interface TopAppBarProps {
   title?: string;
   subtitle?: string;
+  onMenuClick?: () => void;
+  showMenuButton?: boolean;
 }
 
 export function TopAppBar({
   title = 'Tableau de Bord',
   subtitle = 'Session 2025 • Programme National',
+  onMenuClick,
+  showMenuButton = true,
 }: TopAppBarProps) {
   const student = useStudent();
   return (
-    <header className="h-16 border-b border-outline-variant/60 bg-surface/80 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-20">
+    <header className="h-16 border-b border-outline-variant/60 bg-surface/80 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between sticky top-0 z-20">
       {/* Title & context */}
-      <div>
-        <h1 className="font-headline font-bold text-primary text-lg md:text-xl leading-tight">
-          {title}
-        </h1>
-        <span className="font-mono text-[10px] text-on-surface-variant uppercase tracking-wider block">
-          {subtitle}
-        </span>
+      <div className="flex items-center gap-3 min-w-0">
+        {showMenuButton && onMenuClick && (
+          <button
+            onClick={onMenuClick}
+            aria-label="Ouvrir le menu"
+            className="md:hidden p-2 rounded-xl border border-outline-variant/80 bg-surface-container-low hover:bg-surface-container-high text-primary transition-colors shrink-0"
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        )}
+        <div className="min-w-0">
+          <h1 className="font-headline font-bold text-primary text-base sm:text-xl leading-tight truncate">
+            {title}
+          </h1>
+          <span className="font-mono text-[9px] sm:text-[10px] text-on-surface-variant uppercase tracking-wider block truncate">
+            {subtitle}
+          </span>
+        </div>
       </div>
 
       {/* Center / Right widgets */}

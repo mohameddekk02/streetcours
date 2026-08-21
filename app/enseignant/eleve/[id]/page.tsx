@@ -30,16 +30,16 @@ export default async function EleveDetailPage({ params }: { params: { id: string
       </div>
 
       {/* Student Dossier Header Card */}
-      <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6 sm:p-8 paper-shadow flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-        <div className="flex items-center gap-5">
-          <div className="w-20 h-20 rounded-2xl bg-primary-container text-on-primary font-headline font-black text-2xl flex items-center justify-center shadow-md">
+      <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-5 sm:p-8 paper-shadow flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 sm:gap-5">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-primary text-on-primary font-headline font-black text-xl sm:text-2xl flex items-center justify-center shadow-md shrink-0">
             {student.fullName.substring(0, 2).toUpperCase()}
           </div>
-          <div className="space-y-1">
-            <span className="font-mono text-xs font-bold text-secondary uppercase">
+          <div className="space-y-1 min-w-0">
+            <span className="font-mono text-[10px] sm:text-xs font-bold text-secondary uppercase block">
               Matricule : {student.matricule} • {student.level}
             </span>
-            <h1 className="font-headline text-2xl sm:text-3xl font-black text-primary">
+            <h1 className="font-headline text-xl sm:text-2xl lg:text-3xl font-black text-primary truncate">
               {student.fullName}
             </h1>
             <p className="font-body text-xs text-on-surface-variant">
