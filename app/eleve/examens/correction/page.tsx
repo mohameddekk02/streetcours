@@ -83,7 +83,7 @@ export default function RapportCorrectionPage() {
       <div className="bg-surface-container-lowest border-2 border-outline-variant rounded-2xl p-6 sm:p-8 paper-shadow flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
         <div className="space-y-2 text-center md:text-left">
           <span className="font-mono text-xs font-bold text-secondary uppercase tracking-widest">
-            Barème National MENFOP /20
+            Barème National /20
           </span>
           <div className="flex items-baseline justify-center md:justify-start gap-2">
             <span className="font-headline font-black text-4xl sm:text-5xl text-primary">
@@ -98,9 +98,9 @@ export default function RapportCorrectionPage() {
 
         <div className="shrink-0">
           <Cachet
-            label="MENFOP RÉPUBLIQUE DE DJIBOUTI"
+            label="EXAMEN NATIONAL DJIBOUTI"
             mention="TRÈS BIEN • 18.5/20"
-            code="BAC-2024-OFFICIEL"
+            code="BAC-2024-NATIONAL"
             variant="primary"
             rotation="right"
             size="lg"
@@ -159,7 +159,7 @@ export default function RapportCorrectionPage() {
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-secondary" />
             <h3 className="font-headline font-bold text-base text-primary">
-              Corrigé Type Officiel & Solutions Détaillées MENFOP
+              Corrigé Type Détaillé & Barème National
             </h3>
           </div>
           <ChevronDown

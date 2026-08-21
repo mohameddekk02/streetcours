@@ -72,7 +72,7 @@ export default function CopieExamenBlancPage() {
             {/* Header of official exam */}
             <div className="text-center pb-4 border-b-2 border-outline-variant space-y-1">
               <span className="font-mono text-[10px] font-bold tracking-widest text-on-surface-variant uppercase block">
-                RÉPUBLIQUE DE DJIBOUTI • MENFOP
+                RÉPUBLIQUE DE DJIBOUTI • PROGRAMME NATIONAL
               </span>
               <h2 className="font-headline font-black text-base text-primary uppercase">
                 BACCALAURÉAT DE L&apos;ENSEIGNEMENT GÉNÉRAL

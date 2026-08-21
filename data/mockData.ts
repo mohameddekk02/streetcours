@@ -311,7 +311,7 @@ export const mockExamsList: ExamPaper[] = [
     coefficient: 7,
     pagesCount: 4,
     difficulty: 'Standard',
-    instructions: ["Sujet officiel MENFOP session 2023."],
+    instructions: ["Sujet national d'annales session 2023."],
     sections: []
   },
   {

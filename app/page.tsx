@@ -53,7 +53,7 @@ export default function LandingPage() {
               </h1>
 
               <p className="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed max-w-2xl">
-                La plateforme de référence pour les lycéens et collégiens de Djibouti. Annales officielles corrigées pas-à-pas, simulateur d&apos;examen blanc chronométré et tuteur socratique intelligent.
+                La plateforme de référence pour les lycéens et collégiens de Djibouti. Annales nationales corrigées pas-à-pas, simulateur d&apos;examen blanc chronométré et tuteur socratique intelligent.
               </p>
 
               {/* Action Buttons */}
@@ -78,12 +78,12 @@ export default function LandingPage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-outline-variant/60 max-w-md">
                 <div>
-                  <div className="font-headline font-black text-2xl sm:text-3xl text-secondary">+150</div>
-                  <div className="font-body text-xs text-on-surface-variant">Sujets d&apos;annales MENFOP</div>
+                  <div className="font-headline font-black text-2xl sm:text-3xl text-secondary">Bac & Brevet</div>
+                  <div className="font-body text-xs text-on-surface-variant">Séries S, L, ES & 3ème</div>
                 </div>
                 <div>
-                  <div className="font-headline font-black text-2xl sm:text-3xl text-emerald-700">100%</div>
-                  <div className="font-body text-xs text-on-surface-variant">Programme national</div>
+                  <div className="font-headline font-black text-2xl sm:text-3xl text-emerald-700">Programme national</div>
+                  <div className="font-body text-xs text-on-surface-variant">Contenus alignés MENFOP</div>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function LandingPage() {
         <div className="lg:pl-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="font-mono text-xs font-bold text-secondary uppercase tracking-wider">
-              Architecture Pédagogique MENFOP
+              Architecture Pédagogique Nationale
             </span>
             <h2 className="font-headline text-3xl sm:text-4xl font-black text-primary">
               Les 4 Piliers de l&apos;Excellence Académique

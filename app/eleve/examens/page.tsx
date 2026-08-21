@@ -124,7 +124,7 @@ export default function ExamCatalogPage() {
 
             <div className="pt-4 border-t border-outline-variant flex items-center justify-between gap-3">
               <span className="text-xs font-mono font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg">
-                Sujet Officiel MENFOP
+                Sujet d&apos;Annales Nationales
               </span>
 
               <Link

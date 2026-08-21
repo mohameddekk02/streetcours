@@ -249,7 +249,7 @@ export default function StudentDashboardPage() {
                 Annales Officielles
               </h2>
               <p className="font-body text-xs text-on-surface-variant">
-                Sessions MENFOP récentes
+                Sessions nationales récentes
               </p>
             </div>
             <Link

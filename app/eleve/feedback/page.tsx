@@ -18,14 +18,14 @@ export default function FeedbackImmediatPage() {
             Excellent travail ! Démonstration Validée
           </h1>
           <p className="font-body text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-            Vous avez résolu l&apos;exercice sur les <strong>Nombres Complexes</strong> en respectant l&apos;ensemble des critères du barème officiel MENFOP.
+            Vous avez résolu l&apos;exercice sur les <strong>Nombres Complexes</strong> en respectant l&apos;ensemble des critères du barème national.
           </p>
         </div>
 
         {/* Official Cachet Stamp */}
         <div className="shrink-0">
           <Cachet
-            label="MENFOP DJIBOUTI"
+            label="PROGRAMME NATIONAL"
             mention="MENTION TRÈS BIEN"
             code="NOTE: 19.5/20"
             date="EXCELLENCE"

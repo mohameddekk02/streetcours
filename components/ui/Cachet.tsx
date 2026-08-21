@@ -14,7 +14,7 @@ interface CachetProps {
 export function Cachet({
   label = 'RÉPUBLIQUE DE DJIBOUTI',
   mention = 'VALIDÉ',
-  code = 'MENFOP-2024',
+  code = 'BAC-DJ-2024',
   date = 'SESSION 2024',
   variant = 'primary',
   rotation = 'right',

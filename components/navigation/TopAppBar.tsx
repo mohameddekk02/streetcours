@@ -12,7 +12,7 @@ interface TopAppBarProps {
 
 export function TopAppBar({
   title = 'Tableau de Bord',
-  subtitle = 'Session 2025 • MENFOP Djibouti',
+  subtitle = 'Session 2025 • Programme National',
 }: TopAppBarProps) {
   const student = useStudent();
   return (
